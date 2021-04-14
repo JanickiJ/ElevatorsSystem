@@ -6,7 +6,7 @@ import agh.cs.elevators.basics.Task;
 import agh.cs.elevators.engine.OptionsParser;
 import agh.cs.elevators.system.ElevatorSystemGenerator;
 import agh.cs.elevators.system.ElevatorsSystem;
-import agh.cs.elevators.system.ElevatorsSystemEngine;
+import agh.cs.elevators.system.ElevatorsSystemEngineCorrect;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -37,7 +37,7 @@ public class Visualisation {
     private final Scene scene;
     private final String path = "resources/agh/cs/elevators/";
     private final ElevatorsSystem system;
-    private final ElevatorsSystemEngine engine;
+    private final ElevatorsSystemEngineCorrect engine;
     private final ElevatorSystemGenerator generator;
     private Direction newTaskDirection;
     private boolean showInfo;

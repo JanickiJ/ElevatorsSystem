@@ -3,10 +3,9 @@ package agh.cs.elevators.system;
 import agh.cs.elevators.basics.Elevator;
 import agh.cs.elevators.basics.Task;
 
-public class ElevatorsSystemEngine {
-    private final ElevatorsSystem system;
+public class ElevatorsSystemEngineCorrect extends AbstractElevatorsSystem {
 
-    public ElevatorsSystemEngine(ElevatorsSystem system){
+    public ElevatorsSystemEngineCorrect(ElevatorsSystem system){
         this.system = system;
     }
 
@@ -21,12 +20,6 @@ public class ElevatorsSystemEngine {
             }
         }
         elevatorToPickUp.addTask(task);
-    }
-
-    public void step(){
-        for(Elevator elevator : system.getElevators()){
-            elevator.move();
-        }
     }
 
 }

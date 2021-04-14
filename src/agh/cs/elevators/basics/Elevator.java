@@ -28,7 +28,7 @@ public class Elevator {
         int Fs;
 
         if (direction.isInPlace()){
-            Fs = currentFloor.getDistance(newTask.getDestination())+1;
+            Fs = -1;
         }
         else if (direction.isUp() == newTask.getDestination().isAbove(currentFloor)) {
             if (newTask.getDirection() == direction) {
@@ -47,6 +47,13 @@ public class Elevator {
             else{
                 Fs = currentFloor.getDistance(newTask.getDestination()) + 2 * (newTask.getDestination().getNumber());
             }
+
+           /* if(direction.isUp() != newTask.getDirection().isUp()){
+                Fs = currentFloor.getDistance(newTask.getDestination()) + 2 * (currentFloor.getDistance(system.getLastFloor()));
+            }
+            else{
+                Fs = currentFloor.getDistance(newTask.getDestination()) + 2 * (currentFloor.getDistance(system.getLastFloor())) + 2 * (newTask.getDestination().getNumber());
+            }*/
         }
         return Fs;
     }

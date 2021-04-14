@@ -13,12 +13,12 @@ import java.util.Map;
 public class ElevatorsSystem {
     private final LinkedList<Elevator> elevators = new LinkedList<>();
     private final Map<Integer, Floor> floors = new HashMap<>();
-    private final ElevatorsSystemEngine engine;
+    private final ElevatorsSystemEngineCorrect engine;
     private final ElevatorSystemGenerator generator;
     private final OptionsParser optionsParser;
 
     public ElevatorsSystem(OptionsParser optionsParser){
-        this.engine = new ElevatorsSystemEngine(this);
+        this.engine = new ElevatorsSystemEngineCorrect(this);
         this.generator = new ElevatorSystemGenerator(this,optionsParser);
         this.optionsParser = optionsParser;
 
@@ -52,7 +52,7 @@ public class ElevatorsSystem {
         return floors;
     }
 
-    public ElevatorsSystemEngine getEngine() {
+    public ElevatorsSystemEngineCorrect getEngine() {
         return engine;
     }
 

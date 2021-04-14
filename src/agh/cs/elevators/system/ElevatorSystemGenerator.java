@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.Random;
 
 public class ElevatorSystemGenerator {
-    private final ElevatorsSystemEngine engine;
+    private final ElevatorsSystemEngineCorrect engine;
     private final ElevatorsSystem system;
     private final OptionsParser optionsParser;
     private final LinkedList<Task> tasks;
